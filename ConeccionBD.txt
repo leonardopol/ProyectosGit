@@ -1,0 +1,5 @@
+Bd: losquichines
+usuario: pelu
+password: Pelu123
+Port: 3306
+WampServer
