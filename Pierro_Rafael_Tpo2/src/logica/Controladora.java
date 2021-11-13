@@ -25,6 +25,7 @@ public class Controladora {
         masc.setObservaciones(observaciones);
         
         //paso el objeto masc seteado con los datos al metodo altaMascota de la controladora de la persistencia
+        
         controlPersis.altaMascota(masc);
     }
     
