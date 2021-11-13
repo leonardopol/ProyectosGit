@@ -1,4 +1,7 @@
 Bd: losquichines
+
+"jdbc:mysql://localhost:3306/losquichines?ServerTimeZone=UTC"
+
 usuario: pelu
 password: Pelu123
 Port: 3306
