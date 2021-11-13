@@ -1,8 +1,15 @@
 package igu;
 
-public class Principal extends javax.swing.JFrame {
+import logica.Controladora;
 
-    public Principal() {
+public class Principal extends javax.swing.JFrame {
+    
+    //agregamos al constructor el parametro que le pasamos de la controladora de la logica
+    //creamos una variable global de tipo controladora para pasarle al constructor
+    Controladora control;
+    
+    public Principal(Controladora control) {
+        this.control = control;
         initComponents();
     }
 
