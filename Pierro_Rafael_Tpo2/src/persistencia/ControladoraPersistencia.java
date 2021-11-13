@@ -17,6 +17,7 @@ public class ControladoraPersistencia {
     }
     //aplico sobrecarga de metodos
     //si recibe un objeto borro por id
+    //Acepto la recomendacion Try/Catch para capturar la excepcion
     public void bajaMascota(Mascota masco){
         try {
             mascotaJpa.destroy(masco.getId());
