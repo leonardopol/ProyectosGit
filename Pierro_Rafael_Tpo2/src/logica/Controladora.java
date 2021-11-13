@@ -8,9 +8,11 @@ public class Controladora {
     //llamo a la controladora persistencia con la instancia controlPersis
     ControladoraPersistencia controlPersis = new ControladoraPersistencia();
     
+    //recibo los datos del btn agregar de la igu
     public void crearMascota(String numCliente, String nombrePerro, String raza, String color, 
             String alergico, String atencionEspecial, String nombreDuenio, String celDuenio, String observaciones){
         
+        //Creo un objeto masc de tipo Mascota que va a setearce con los datos que recibo
         Mascota masc = new Mascota();
         masc.setNumCliente(numCliente);
         masc.setNombrePerro(nombrePerro);
@@ -22,6 +24,7 @@ public class Controladora {
         masc.setCelDuenio(celDuenio);
         masc.setObservaciones(observaciones);
         
+        //paso el objeto masc seteado con los datos al metodo altaMascota de la controladora de la persistencia
         controlPersis.altaMascota(masc);
     }
     

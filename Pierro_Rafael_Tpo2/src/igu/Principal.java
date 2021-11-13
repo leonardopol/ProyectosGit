@@ -268,6 +268,7 @@ public class Principal extends javax.swing.JFrame {
         String celDuenio = txtCelDuenio.getText();
         String observaciones = txtObservaciones.getText();
         
+        //Paso los datos al metodo crearMascota de la controladora de la logica
         control.crearMascota(numCliente, nombrePerro, raza, color, alergico, atencionEspecial, nombreDuenio, celDuenio, observaciones);
         JOptionPane.showMessageDialog(rootPane, "Mascota agregada correctamente", "Mascota agregada", INFORMATION_MESSAGE);
     }//GEN-LAST:event_btnGuardarActionPerformed
