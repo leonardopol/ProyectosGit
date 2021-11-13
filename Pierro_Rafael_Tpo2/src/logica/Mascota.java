@@ -1,8 +1,19 @@
 package logica;
 
+import javax.persistence.Basic;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+//Mapeo la clase para la persistencia
+@Entity
 public class Mascota {
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    @Basic
     private String numCliente;
     private String nombrePerro;
     private String raza;
@@ -13,6 +24,7 @@ public class Mascota {
     private String celDuenio;
     private String Observaciones;
 
+    //Creo constructor vacio, con parametros, getters y setters, toString
     public Mascota() {
     }
 
