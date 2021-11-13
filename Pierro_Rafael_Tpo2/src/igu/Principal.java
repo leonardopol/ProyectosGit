@@ -75,7 +75,7 @@ public class Principal extends javax.swing.JFrame {
 
         cmbAlergico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Si", "No" }));
 
-        cmbAtencionEspecial.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "No", "Si" }));
+        cmbAtencionEspecial.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Si", "No" }));
 
         lblNombreDuenio.setText("Nombre Dueño:");
 
