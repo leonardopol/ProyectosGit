@@ -8,6 +8,23 @@ public class Controladora {
     //llamo a la controladora persistencia con la instancia controlPersis
     ControladoraPersistencia controlPersis = new ControladoraPersistencia();
     
+    public void crearMascota(String numCliente, String nombrePerro, String raza, String color, 
+            String alergico, String atencionEspecial, String nombreDuenio, String celDuenio, String observaciones){
+        
+        Mascota masc = new Mascota();
+        masc.setNumCliente(numCliente);
+        masc.setNombrePerro(nombrePerro);
+        masc.setRaza(raza);
+        masc.setColor(color);
+        masc.setAlergico(alergico);
+        masc.setAtencionEspecial(atencionEspecial);
+        masc.setNombreDuenio(nombreDuenio);
+        masc.setCelDuenio(celDuenio);
+        masc.setObservaciones(observaciones);
+        
+        controlPersis.altaMascota(masc);
+    }
+    
     //llamamos a los metodos que tenemos en la persistencia y le pasamos el objeto
     public void altaMascota(Mascota masco){
         controlPersis.altaMascota(masco);

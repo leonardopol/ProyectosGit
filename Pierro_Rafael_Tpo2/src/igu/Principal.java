@@ -1,5 +1,7 @@
 package igu;
 
+import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.INFORMATION_MESSAGE;
 import logica.Controladora;
 
 public class Principal extends javax.swing.JFrame {
@@ -35,9 +37,9 @@ public class Principal extends javax.swing.JFrame {
         cmbAlergico = new javax.swing.JComboBox<>();
         cmbAtencionEspecial = new javax.swing.JComboBox<>();
         lblNombreDuenio = new javax.swing.JLabel();
-        txtNumCliente1 = new javax.swing.JTextField();
+        txtNombreDuenio = new javax.swing.JTextField();
         lblCelDuenio = new javax.swing.JLabel();
-        txtNumCliente2 = new javax.swing.JTextField();
+        txtCelDuenio = new javax.swing.JTextField();
         lblObservaciones = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtObservaciones = new javax.swing.JTextArea();
@@ -123,10 +125,10 @@ public class Principal extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(txtNumCliente1)
+                                .addComponent(txtNombreDuenio)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(txtNumCliente2)
+                                .addComponent(txtCelDuenio)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addComponent(lblImgen)
                         .addGap(61, 61, 61))
@@ -210,11 +212,11 @@ public class Principal extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblNombreDuenio)
-                            .addComponent(txtNumCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtNombreDuenio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblCelDuenio)
-                            .addComponent(txtNumCliente2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtCelDuenio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblObservaciones)
@@ -244,11 +246,30 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
-        // TODO add your handling code here:
+        txtNumCliente.setText("");
+        txtNombrePerro.setText("");
+        txtRaza.setText("");
+        txtColor.setText("");
+        cmbAlergico.setSelectedIndex(0);
+        cmbAtencionEspecial.setSelectedIndex(0);
+        txtNombreDuenio.setText("");
+        txtCelDuenio.setText("");
+        txtObservaciones.setText("");
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        // TODO add your handling code here:
+        String numCliente = txtNumCliente.getText();
+        String nombrePerro = txtNombrePerro.getText();
+        String raza = txtRaza.getText();
+        String color = txtColor.getText();
+        String alergico = (String)cmbAlergico.getSelectedItem();
+        String atencionEspecial = (String)cmbAtencionEspecial.getSelectedItem();
+        String nombreDuenio = txtNombreDuenio.getText();
+        String celDuenio = txtCelDuenio.getText();
+        String observaciones = txtObservaciones.getText();
+        
+        control.crearMascota(numCliente, nombrePerro, raza, color, alergico, atencionEspecial, nombreDuenio, celDuenio, observaciones);
+        JOptionPane.showMessageDialog(rootPane, "Mascota agregada correctamente", "Mascota agregada", INFORMATION_MESSAGE);
     }//GEN-LAST:event_btnGuardarActionPerformed
 
 
@@ -273,11 +294,11 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel lblRaza;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JLabel lblVersion;
+    private javax.swing.JTextField txtCelDuenio;
     private javax.swing.JTextField txtColor;
+    private javax.swing.JTextField txtNombreDuenio;
     private javax.swing.JTextField txtNombrePerro;
     private javax.swing.JTextField txtNumCliente;
-    private javax.swing.JTextField txtNumCliente1;
-    private javax.swing.JTextField txtNumCliente2;
     private javax.swing.JTextArea txtObservaciones;
     private javax.swing.JTextField txtRaza;
     // End of variables declaration//GEN-END:variables
