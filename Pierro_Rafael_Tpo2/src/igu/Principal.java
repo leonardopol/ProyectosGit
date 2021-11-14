@@ -8,6 +8,8 @@ public class Principal extends javax.swing.JFrame {
     
     //agregamos al constructor el parametro que le pasamos de la controladora de la logica
     //creamos una variable global de tipo controladora para pasarle al constructor
+    //creo una id para la BD que va a ser automatico y los campos de tipo String ya que no va a haber calculos
+    //matematicos y me ahorro la validacion de campos
     Controladora control;
     
     public Principal(Controladora control) {
@@ -271,6 +273,7 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        //limpio los campos cada ves que se aprete el boton limpiar
         txtNumCliente.setText("");
         txtNombrePerro.setText("");
         txtRaza.setText("");
@@ -283,6 +286,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        //obtengo los datos y los asigno a variables String 
         String numCliente = txtNumCliente.getText();
         String nombrePerro = txtNombrePerro.getText();
         String raza = txtRaza.getText();
@@ -293,8 +297,9 @@ public class Principal extends javax.swing.JFrame {
         String celDuenio = txtCelDuenio.getText();
         String observaciones = txtObservaciones.getText();
         
-        //Paso los datos al metodo crearMascota de la controladora de la logica
+        //Paso los datos de estas variables al metodo crearMascota de la controladora de la logica
         control.crearMascota(numCliente, nombrePerro, raza, color, alergico, atencionEspecial, nombreDuenio, celDuenio, observaciones);
+        //muestro un mensaje que se agrego correctamente
         JOptionPane.showMessageDialog(rootPane, "Mascota agregada correctamente", "Mascota agregada", INFORMATION_MESSAGE);
     }//GEN-LAST:event_btnGuardarActionPerformed
 

@@ -28,7 +28,8 @@ public class Controladora {
         controlPersis.altaMascota(masc);
     }
     
-    //llamamos a los metodos que tenemos en la persistencia y le pasamos el objeto
+    //llamamos a los metodos que tenemos en la persistencia y le pasamos el objeto o la id
+    //agrego mas metodos dejandolo escalable a futuro por si se le agrega funcionalidad
     public void altaMascota(Mascota masco){
         controlPersis.altaMascota(masco);
     }
