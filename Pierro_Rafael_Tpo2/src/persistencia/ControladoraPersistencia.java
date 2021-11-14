@@ -13,7 +13,8 @@ public class ControladoraPersistencia {
     MascotaJpaController mascotaJpa = new MascotaJpaController();
     
     public void altaMascota(Mascota masco){
-        mascotaJpa.create(masco);
+       
+           mascotaJpa.create(masco);
     }
     //aplico sobrecarga de metodos
     //si recibe un objeto borro por id

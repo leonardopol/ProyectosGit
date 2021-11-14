@@ -50,44 +50,69 @@ public class Principal extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        lblEmpresa.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
+        lblEmpresa.setFont(new java.awt.Font("Roboto", 3, 14)); // NOI18N
         lblEmpresa.setText("Los Quichines");
 
-        lblTitulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblTitulo.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        lblTitulo.setForeground(new java.awt.Color(0, 102, 102));
         lblTitulo.setText("Peluquería Canina");
 
         lblImgen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/descarga.png"))); // NOI18N
 
-        lblVersion.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
+        lblVersion.setFont(new java.awt.Font("Roboto", 3, 11)); // NOI18N
         lblVersion.setText("Versión 1.0");
 
+        lblNumCliente.setFont(new java.awt.Font("Roboto", 1, 11)); // NOI18N
         lblNumCliente.setText("Cliente Nº:");
 
+        txtNumCliente.setFont(new java.awt.Font("Roboto", 0, 11)); // NOI18N
+
+        lblNombrePerro.setFont(new java.awt.Font("Roboto", 1, 11)); // NOI18N
         lblNombrePerro.setText("Nombre:");
 
+        txtNombrePerro.setFont(new java.awt.Font("Roboto", 0, 11)); // NOI18N
+
+        lblRaza.setFont(new java.awt.Font("Roboto", 1, 11)); // NOI18N
         lblRaza.setText("Raza:");
 
+        txtRaza.setFont(new java.awt.Font("Roboto", 0, 11)); // NOI18N
+
+        lblColor.setFont(new java.awt.Font("Roboto", 1, 11)); // NOI18N
         lblColor.setText("Color:");
 
+        txtColor.setFont(new java.awt.Font("Roboto", 0, 11)); // NOI18N
+
+        lblAlergico.setFont(new java.awt.Font("Roboto", 1, 11)); // NOI18N
         lblAlergico.setText("Alérgico:");
 
+        lblAtencionEspecial.setFont(new java.awt.Font("Roboto", 1, 11)); // NOI18N
         lblAtencionEspecial.setText("Atención Especial:");
 
+        cmbAlergico.setFont(new java.awt.Font("Roboto", 1, 11)); // NOI18N
         cmbAlergico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Si", "No" }));
 
+        cmbAtencionEspecial.setFont(new java.awt.Font("Roboto", 1, 11)); // NOI18N
         cmbAtencionEspecial.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Si", "No" }));
 
+        lblNombreDuenio.setFont(new java.awt.Font("Roboto", 1, 11)); // NOI18N
         lblNombreDuenio.setText("Nombre Dueño:");
 
+        txtNombreDuenio.setFont(new java.awt.Font("Roboto", 0, 11)); // NOI18N
+
+        lblCelDuenio.setFont(new java.awt.Font("Roboto", 1, 11)); // NOI18N
         lblCelDuenio.setText("Cel. Dueño:");
 
+        txtCelDuenio.setFont(new java.awt.Font("Roboto", 0, 11)); // NOI18N
+
+        lblObservaciones.setFont(new java.awt.Font("Roboto", 1, 11)); // NOI18N
         lblObservaciones.setText("Observaciones:");
 
         txtObservaciones.setColumns(20);
+        txtObservaciones.setFont(new java.awt.Font("Roboto", 0, 11)); // NOI18N
         txtObservaciones.setRows(5);
         jScrollPane1.setViewportView(txtObservaciones);
 
-        btnLimpiar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnLimpiar.setFont(new java.awt.Font("Roboto", 1, 11)); // NOI18N
         btnLimpiar.setText("Limpiar");
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,7 +120,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        btnGuardar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnGuardar.setFont(new java.awt.Font("Roboto", 1, 11)); // NOI18N
         btnGuardar.setText("Guardar");
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,7 +137,7 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(lblEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(122, 122, 122)
                 .addComponent(lblTitulo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 156, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 175, Short.MAX_VALUE)
                 .addComponent(lblVersion, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(53, 53, 53))
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -220,11 +245,11 @@ public class Principal extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblObservaciones)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(41, 41, 41)
                         .addComponent(lblImgen)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnLimpiar)
                     .addComponent(btnGuardar))
